@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record search</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Light green background color */
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(4, 253, 4); /* White background for the form container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .search-button {
+            background-color: #fff; /* White background for the submit button */
+            color: #000; /* Black text color for the submit button */
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px; /* Add space below the Search button */
+        }
+        .back-button {
+            background-color: #039b03; /* Dark green background for the back button */
+            color: #fff; /* White text color for the back button */
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Record search</h2>
+
+        <form action="/subid" method="post">
+            <label for="teacherId">Teacher ID:</label>
+            <input type="number" id="teacherId" name="teacherId" placeholder="Enter the teacher ID to be updated">
+            <input type="submit" value="Search" class="search-button">
+        </form>
+        <form action="/subname" method="post">
+            <label for="teacherName">Name:</label>
+            <input type="text" id="teacherName" name="teacherName" placeholder="Enter the teacher's name">
+            <input type="submit" value="Search" class="search-button">
+        </form>
+        <form action="/subdob" method="post">
+            <label for="teacherDOB">Date of Birth:</label>
+            <input type="text" id="teacherDOB" name="teacherDOB" placeholder="Enter the teacher's date of birth">
+            <input type="submit" value="Search" class="search-button">
+        </form>
+        <form action="/submobile" method="post">
+            <label for="teacherMobile">Mobile Number:</label>
+            <input type="number" id="teacherMobile" name="teacherMobile" placeholder="Enter the teacher's mobile number">
+            <input type="submit" value="Search" class="search-button">
+        </form>
+      
+    </div>
+    <button class="back-button" onclick="goBack()">Back</button>
+
+    <script>
+        function goBack() {
+            // Add your custom functionality for the back button click event here
+            // For example, you can use window.history.back() to go back one step in the browser history
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

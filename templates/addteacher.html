@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Addition</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; 
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(4, 253, 4); 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #fff; /* White background for the submit button */
+            color: #000; /* Black text color for the submit button */
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .back-button {
+            background-color: #039b03; /* Dark green background for the back button */
+            color: #fff; /* White text color for the back button */
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Record Addition</h2>
+
+        <form action="/subm" method="post">
+            <label for="teacherId">Teacher ID:</label>
+            <input type="number" id="teacherId" name="teacherId" placeholder="Enter the teacher ID to be deleted" required>
+
+            <label for="teacherName">Name:</label>
+            <input type="text" id="teacherName" name="teacherName" placeholder="Enter the teacher's name" required>
+
+            <label for="teacherGender">Gender:</label>
+            <input type="text" id="teacherGender" name="teacherGender" placeholder="Enter the teacher's gender" required>
+
+            <label for="teacherDOB">Date of Birth:</label>
+            <input type="text" id="teacherDOB" name="teacherDOB" placeholder="Enter the teacher's date of birth" required>
+
+            <label for="teacherMobile">Mobile Number:</label>
+            <input type="number" id="teacherMobile" name="teacherMobile" placeholder="Enter the teacher's mobile number" required>
+
+            <label for="teacherSubject">Subject:</label>
+            <input type="text" id="teacherSubject" name="teacherSubject" placeholder="Enter the teacher's subject" required>
+
+            <label for="teacherExperience">Year of Experience:</label>
+            <input type="number" id="teacherExperience" name="teacherExperience" placeholder="Enter the teacher's year of experience" required>
+
+            <label for="teacherClasses">Number of Classes:</label>
+            <input type="number" id="teacherClasses" name="teacherClasses" placeholder="Enter the number of classes taught by the teacher" required>
+
+            <label for="teacherSalary">Salary of the Teacher:</label>
+            <input type="number" id="teacherSalary" name="teacherSalary" placeholder="Enter the salary received by the teacher" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <button class="back-button" onclick="goBack()">Back</button>
+
+    <script>
+        function goBack() {
+            // Add your custom functionality for the back button click event here
+            // For example, you can use window.history.back() to go back one step in the browser history
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>
